@@ -5,8 +5,11 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     public MapPoint currentMapPoint;//the map point where the ship is currently at
-    public MapPoint highlightPoint;//the map point the player is looking at
-    public MapPoint targetPoint;//the map point the player has selected to travel to next
+    public MapPoint highlightMapPoint;//the map point the player is looking at
+    public MapPoint targetMapPoint;//the map point the player has selected to travel to next
+
+    public GameObject shipMarker;
+    public float markerBuffer = 0.5f;//distance between current map point and ship marker
 
     // Start is called before the first frame update
     void Start()
@@ -38,11 +41,34 @@ public class MapManager : MonoBehaviour
                 }
             }
         }
-        if (mouseOverPoint != highlightPoint)
+        if (mouseOverPoint != highlightMapPoint)
         {
-            highlightPoint?.highlight(false);
-            highlightPoint = mouseOverPoint;
-            highlightPoint?.highlight(true);
+            highlightMapPoint?.highlight(false);
+            highlightMapPoint = mouseOverPoint;
+            highlightMapPoint?.highlight(true);
+        }
+
+        //Update ship marker
+        Vector2 targetPos = mousePos;
+        if (currentMapPoint == targetMapPoint || currentMapPoint == highlightMapPoint)
+        {
+            targetPos = (Vector2)currentMapPoint.transform.position + Vector2.up;
+            shipMarker.transform.up = Vector2.up;
+            shipMarker.transform.position = currentMapPoint.transform.position;
+        }
+        else
+        {
+            if (targetMapPoint)
+            {
+                targetPos = (Vector2)targetMapPoint.transform.position;
+            }
+            else if (highlightMapPoint)
+            {
+                targetPos = (Vector2)highlightMapPoint.transform.position;
+            }
+            Vector2 dir = (targetPos - (Vector2)currentMapPoint.transform.position).normalized;
+            shipMarker.transform.up = dir;
+            shipMarker.transform.position = (Vector2)currentMapPoint.transform.position + (dir * markerBuffer);
         }
     }
 }
