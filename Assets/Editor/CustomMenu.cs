@@ -23,7 +23,12 @@ public class CustomMenu
         }
         //2017-10-19 copied from https://docs.unity3d.com/Manual/BuildPlayerPipeline.html
         // Get filename.
-        string buildName = EditorUtility.SaveFilePanel("Choose Location of Built Game", defaultPath, PlayerSettings.productName, extension);
+        string buildName = EditorUtility.SaveFilePanel(
+            "Choose Location of Built Game",
+            defaultPath,
+            getProductName(),
+            extension
+            );
 
         // User hit the cancel button.
         if (buildName == "")
@@ -33,6 +38,7 @@ public class CustomMenu
         UnityEngine.Debug.Log("BUILDNAME: " + buildName);
         UnityEngine.Debug.Log("PATH: " + path);
 
+        //Add scenes to build
         string[] levels = new string[EditorBuildSettings.scenes.Length];
         for (int i = 0; i < EditorBuildSettings.scenes.Length; i++)
         {
@@ -47,22 +53,12 @@ public class CustomMenu
         }
 
         // Build player.
-        BuildPipeline.BuildPlayer(levels, buildName, buildTarget, BuildOptions.None);
-
-        // Copy a file from the project folder to the build folder, alongside the built game.
-        string resourcesPath = path + "/Assets/Resources";
-        string dialogPath = resourcesPath + "/Dialogue";
-
-        if (!System.IO.Directory.Exists(dialogPath))
-        {
-            System.IO.Directory.CreateDirectory(resourcesPath);
-        }
-
-        if (true || EditorUtility.DisplayDialog("Dialog Refresh", "Refresh the voice acting entries in " + dialogPath + "?\n\nTHIS WILL DELETE EVERY FILE IN THAT DIRECTORY.", "Yep!", "Unacceptable."))
-        {
-            FileUtil.DeleteFileOrDirectory(dialogPath);
-            FileUtil.CopyFileOrDirectory("Assets/Resources/Dialogue/", dialogPath);
-        }
+        BuildPipeline.BuildPlayer(
+            levels,
+            buildName,
+            buildTarget,
+            BuildOptions.None
+            );
 
         // Run the game (Process class from System.Diagnostics).
         Process proc = new Process();
@@ -93,7 +89,12 @@ public class CustomMenu
 
     public static string getDefaultBuildPath()
     {
-        return System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Unity/" + PlayerSettings.productName + "/Builds/" + PlayerSettings.productName + "_" + PlayerSettings.bundleVersion.Replace(".", "_");
+        string productName = getProductName();
+        return System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) 
+            + "/Unity/" 
+            + productName 
+            + "/Builds/" 
+            + productName + "_" + PlayerSettings.bundleVersion.Replace(".", "_");
     }
     public static string getBuildNamePath(string extension, bool checkFolderExists = true)
     {
@@ -102,7 +103,12 @@ public class CustomMenu
         {
             throw new UnityException("You need to build the " + extension + " for " + PlayerSettings.productName + " (Version " + PlayerSettings.bundleVersion + ") first!");
         }
-        string buildName = defaultPath + "/" + PlayerSettings.productName + "." + extension;
+        string buildName = defaultPath + "/" + getProductName() + "." + extension;
         return buildName;
+    }
+
+    public static string getProductName()
+    {
+        return PlayerSettings.productName.Replace(" ", "");
     }
 }
