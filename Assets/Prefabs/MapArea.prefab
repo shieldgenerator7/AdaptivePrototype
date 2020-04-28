@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1239084288007240267}
   - component: {fileID: 2354890207406574142}
   - component: {fileID: 4095134677950812217}
+  - component: {fileID: -6835831332965964550}
   m_Layer: 0
   m_Name: MapArea
   m_TagString: Untagged
@@ -177,3 +178,16 @@ PolygonCollider2D:
       - {x: 0.53387105, y: 0.21769112}
       - {x: -2.5839572, y: 0.18902951}
       - {x: -2.6241438, y: 0.18866007}
+--- !u!114 &-6835831332965964550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256846603308433043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc587ea38158c95428687e6872e3bb0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaName: 
