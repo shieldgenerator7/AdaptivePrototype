@@ -128,6 +128,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Sapling Mober
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1243361279}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -208,6 +218,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sapling Mober
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Sapling Mober
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &32735220 stripped
@@ -223,6 +263,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Military Base
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1125993671}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -301,7 +351,37 @@ PrefabInstance:
     - target: {fileID: 6300871190895696943, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_Name
-      value: Military Base (1)
+      value: Military Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Military Base
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
@@ -388,7 +468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140788734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -401,6 +481,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Research Facility
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1760155157}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -481,6 +571,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Research Facility
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Research Facility
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &200546122 stripped
@@ -496,6 +616,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Outpost
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1760155157}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -576,6 +706,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outpost
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Outpost
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &308311952 stripped
@@ -591,6 +751,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Mining Operation
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1760155157}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -671,6 +841,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mining Operation
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Mining Operation
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &466706457 stripped
@@ -686,6 +886,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Military Base
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1125993671}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -766,6 +976,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Military Base
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Military Base
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &527828294 stripped
@@ -781,6 +1021,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Border Outpost
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1760155157}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -861,6 +1111,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Border Outpost
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Border Outpost
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &623548193 stripped
@@ -876,6 +1156,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Military Base
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1125993671}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -954,7 +1244,37 @@ PrefabInstance:
     - target: {fileID: 6300871190895696943, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_Name
-      value: Military Base (2)
+      value: Military Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Military Base
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
@@ -971,6 +1291,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Sapling Starrot
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1243361279}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -1051,6 +1381,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sapling Starrot
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Sapling Starrot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &896402014 stripped
@@ -1066,6 +1426,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: International Travel Hub
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1760155157}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -1146,6 +1516,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: International Travel Hub
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: International Travel Hub
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &909773629 stripped
@@ -1161,6 +1561,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Research Facility
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1760155157}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -1241,6 +1651,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Research Facility
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Research Facility
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &984863150 stripped
@@ -1289,6 +1729,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Hydrojenia
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1760155157}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -1369,6 +1819,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hydrojenia
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Hydrojenia
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &1103199955 stripped
@@ -1425,6 +1905,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1125993671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -6835831332965964550, guid: 0d160599ffd0763458b68809c33d2ab2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1793261453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc587ea38158c95428687e6872e3bb0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1169187158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1432,6 +1924,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: U
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1125993671}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -1512,6 +2014,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: U
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: U
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &1169187159 stripped
@@ -1527,6 +2059,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Mining Facility
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1125993671}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -1607,6 +2149,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mining Facility
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Mining Facility
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &1213000868 stripped
@@ -1615,6 +2187,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1213000867}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1243361279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -6835831332965964550, guid: 0d160599ffd0763458b68809c33d2ab2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1722445315}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc587ea38158c95428687e6872e3bb0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1512297928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1622,6 +2206,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Mining Operation
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1760155157}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -1702,6 +2296,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mining Operation
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Mining Operation
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &1512297929 stripped
@@ -1739,6 +2363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cde144ce32e7e4eafbc363a1e9f91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMapPoint: {fileID: 0}
+  highlightPoint: {fileID: 0}
+  targetPoint: {fileID: 0}
 --- !u!4 &1608358174
 Transform:
   m_ObjectHideFlags: 0
@@ -2928,6 +3555,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1722445315}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1760155157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -6835831332965964550, guid: 0d160599ffd0763458b68809c33d2ab2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2979924776672311119}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc587ea38158c95428687e6872e3bb0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1793261453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3290,6 +3929,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Sapling Lefreop
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1243361279}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -3370,6 +4019,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sapling Lefreop
       objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
+      value: Sapling Lefreop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b0484d3cb22d9142b446b4bdea1faaf, type: 3}
 --- !u!4 &1898975140 stripped
@@ -3385,6 +4064,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Grengrov
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1243361279}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -3463,6 +4152,36 @@ PrefabInstance:
     - target: {fileID: 6300871190895696943, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_Name
+      value: Grengrov
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
       value: Grengrov
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4490,6 +5209,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109050548}
     m_Modifications:
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: locationName
+      value: Military Base
+      objectReference: {fileID: 0}
+    - target: {fileID: -6961619800253928105, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: mapArea
+      value: 
+      objectReference: {fileID: 1760155157}
     - target: {fileID: 1700675027424235989, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_SortingLayer
@@ -4568,6 +5297,41 @@ PrefabInstance:
     - target: {fileID: 6300871190895696943, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
         type: 3}
       propertyPath: m_Name
+      value: Military Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300871190895696943, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685249119402062204, guid: 1b0484d3cb22d9142b446b4bdea1faaf,
+        type: 3}
+      propertyPath: m_text
       value: Military Base
       objectReference: {fileID: 0}
     m_RemovedComponents: []

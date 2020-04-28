@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MapPoint : MonoBehaviour
 {
 
     public string locationName;
     public MapArea mapArea;
+
+    public TMP_Text text;
 
     private Collider2D coll;
 
@@ -18,6 +21,7 @@ public class MapPoint : MonoBehaviour
 
     public void highlight(bool show)
     {
+        text.enabled = show;
         if (show)
         {
             if (transform.localScale.x < 1)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.U2D;
+using UnityEditor.SceneManagement;
 
 [CanEditMultipleObjects]
 [CustomEditor(typeof(MapPoint))]
@@ -19,6 +20,10 @@ public class MapPointEditor : Editor
             {
                 MapPoint mp = (MapPoint)obj;
                 mp.locationName = mp.gameObject.name;
+                mp.text.text = mp.locationName;
+                EditorUtility.SetDirty(mp);
+                EditorUtility.SetDirty(mp.text);
+                EditorSceneManager.MarkSceneDirty(mp.gameObject.scene);
             }
         }
         if (GUILayout.Button("Default MapArea"))
@@ -37,6 +42,8 @@ public class MapPointEditor : Editor
                                 Color.white,
                                 0.7f
                                 );
+                        EditorUtility.SetDirty(mp);
+                        EditorSceneManager.MarkSceneDirty(mp.gameObject.scene);
                         break;
                     }
                 }
