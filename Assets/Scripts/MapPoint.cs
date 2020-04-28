@@ -16,10 +16,9 @@ public class MapPoint : MonoBehaviour
         coll = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void highlight(bool show)
     {
-        if (coll.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)))
+        if (show)
         {
             if (transform.localScale.x < 1)
             {
