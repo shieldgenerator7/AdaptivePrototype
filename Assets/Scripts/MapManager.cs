@@ -47,6 +47,7 @@ public class MapManager : MonoBehaviour
             highlightMapPoint?.highlight(false);
             highlightMapPoint = mouseOverPoint;
             highlightMapPoint?.highlight(true);
+            targetMapPoint?.highlight(true);
         }
 
         //Update ship marker
@@ -75,15 +76,28 @@ public class MapManager : MonoBehaviour
         //Update target map point
         if (Input.GetMouseButtonDown(0))
         {
-            if (highlightMapPoint)
+            targetMapPoint?.highlight(false);
+            if (highlightMapPoint != currentMapPoint)
             {
                 targetMapPoint = highlightMapPoint;
+            }
+            else
+            {
+                targetMapPoint = null;
+            }
+            if (targetMapPoint)
+            {
+                travelPath.SetActive(true);
                 Vector2 diff = targetMapPoint.transform.position - currentMapPoint.transform.position;
-                travelPath.transform.position = (Vector2)currentMapPoint.transform.position + diff/2;
+                travelPath.transform.position = (Vector2)currentMapPoint.transform.position + diff / 2;
                 travelPath.transform.right = diff.normalized;
                 Vector2 size = travelPath.GetComponent<SpriteRenderer>().size;
                 size.x = diff.magnitude;
                 travelPath.GetComponent<SpriteRenderer>().size = size;
+            }
+            else
+            {
+                travelPath.SetActive(false);
             }
         }
     }
