@@ -8,6 +8,7 @@ public class MapPoint : MonoBehaviour
 
     public string locationName;
     public MapArea mapArea;
+    public int id = 0;//unique id to distinguish between other MapPoints
 
     public TMP_Text text;
 

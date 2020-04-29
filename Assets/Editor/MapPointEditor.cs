@@ -49,5 +49,29 @@ public class MapPointEditor : Editor
                 }
             }
         }
+        if (GUILayout.Button("Default ID"))
+        {
+            //Clear current ids
+            foreach (Object obj in targets)
+            {
+                MapPoint mp = (MapPoint)obj;
+                mp.id = 0;
+            }
+            //Find max id
+            int maxID = 0;
+            foreach (MapPoint mp in FindObjectsOfType<MapPoint>())
+            {
+                maxID = Mathf.Max(maxID, mp.id);
+            }
+            //Set current ids
+            foreach (Object obj in targets)
+            {
+                maxID++;
+                MapPoint mp = (MapPoint)obj;
+                mp.id = maxID; 
+                EditorUtility.SetDirty(mp);
+                EditorSceneManager.MarkSceneDirty(mp.gameObject.scene);
+            }
+        }
     }
 }
