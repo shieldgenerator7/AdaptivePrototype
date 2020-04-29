@@ -6,10 +6,12 @@ public class Route
 {
     public float distance;
     public List<GameObject> objectPrefabs;
+    public int destinationID;
 
-    public Route(float distance, List<GameObject> objectPrefabs)
+    public Route(float distance, int destinationID, List<GameObject> objectPrefabs)
     {
         this.distance = distance;
+        this.destinationID = destinationID;
         this.objectPrefabs = objectPrefabs;
     }
 

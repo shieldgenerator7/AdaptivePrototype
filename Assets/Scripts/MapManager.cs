@@ -18,7 +18,22 @@ public class MapManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        if (gameManager)
+        {
+            if (gameManager.finishedRoute)
+            {
+                int currentId = gameManager.finishedRoute.destinationID;
+                foreach(MapPoint mp in FindObjectsOfType<MapPoint>())
+                {
+                    if (mp.id == currentId)
+                    {
+                        currentMapPoint = mp;
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     // Update is called once per frame
@@ -95,8 +110,9 @@ public class MapManager : MonoBehaviour
                 }
                 Route route = new Route(
                     (targetMapPoint.transform.position - currentMapPoint.transform.position).magnitude * unitsToSpaceMiles,
+                    targetMapPoint.id,
                     objectPrefabs
-                    );
+                    );;
                 FindObjectOfType<GameManager>().startRoute(route);
             }
             if (highlightMapPoint != currentMapPoint)
