@@ -5,4 +5,7 @@ using UnityEngine;
 public class MapArea : MonoBehaviour
 {
     public string areaName;
+
+    public List<GameObject> objectPrefabs;
+
 }

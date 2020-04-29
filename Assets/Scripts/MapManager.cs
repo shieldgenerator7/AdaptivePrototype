@@ -46,6 +46,10 @@ public class MapManager : MonoBehaviour
                 }
             }
         }
+        if (mouseOverPoint != null)
+        {
+            int i = 0;
+        }
         if (mouseOverPoint != highlightMapPoint)
         {
             highlightMapPoint?.highlight(false);
@@ -81,12 +85,17 @@ public class MapManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             targetMapPoint?.highlight(false);
-            if (highlightMapPoint == targetMapPoint)
+            if (highlightMapPoint == targetMapPoint && targetMapPoint != null)
             {
                 //Launch ship
+                List<GameObject> objectPrefabs = new List<GameObject>();
+                foreach(MapArea mp in FindObjectsOfType<MapArea>())
+                {
+                    objectPrefabs.AddRange(mp.objectPrefabs);
+                }
                 Route route = new Route(
                     (targetMapPoint.transform.position - currentMapPoint.transform.position).magnitude * unitsToSpaceMiles,
-                    new List<MapArea>(FindObjectsOfType<MapArea>())
+                    objectPrefabs
                     );
                 FindObjectOfType<GameManager>().startRoute(route);
             }
