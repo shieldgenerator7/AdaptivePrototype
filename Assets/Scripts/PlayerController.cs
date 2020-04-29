@@ -10,4 +10,9 @@ public class PlayerController : ShipController
         float vertical = Input.GetAxis("Vertical");
         return new Vector2(horizontal, vertical);
     }
+
+    protected override void destroy()
+    {
+        FindObjectOfType<GameManager>().cancelRoute();
+    }
 }

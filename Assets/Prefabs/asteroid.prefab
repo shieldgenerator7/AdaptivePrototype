@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3152227121843788407}
   - component: {fileID: 484561337457498316}
   - component: {fileID: 709027447211923576}
+  - component: {fileID: -5306797488443197855}
   m_Layer: 0
   m_Name: asteroid
   m_TagString: Untagged
@@ -120,3 +121,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.495
+--- !u!114 &-5306797488443197855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3152227121843788360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe08061cfa1d43342a6ada6fea4edeee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  driftSpeed: 0
+  maxHP: 10
+  healthPoints: 0

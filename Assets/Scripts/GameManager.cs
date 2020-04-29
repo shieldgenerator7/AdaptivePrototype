@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public void startRoute(Route route)
     {
         prototype.transform.position = Vector2.zero;
+        prototype.GetComponent<ShipController>().healthPoints = prototype.GetComponent<ShipController>().maxHP;
         showMap(false);
         //Destroy current level objects
         //2010-04-28: copied from http://answers.unity.com/answers/717490/view.html
@@ -84,5 +85,11 @@ public class GameManager : MonoBehaviour
             SceneManager.UnloadSceneAsync("MapScene");
             routePath.display(false);
         }
+    }
+
+    public void cancelRoute()
+    {
+        showMap(true);
+        currentRoute = null;
     }
 }
