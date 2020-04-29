@@ -11,7 +11,7 @@ public class MapManager : MonoBehaviour
 
     public GameObject shipMarker;
     public float markerBuffer = 0.5f;//distance between current map point and ship marker
-    public GameObject travelPath;
+    public Line travelPath;
 
     public float unitsToSpaceMiles = 45;//multiply by Unity units to get space miles
 
@@ -23,17 +23,10 @@ public class MapManager : MonoBehaviour
         {
             if (gameManager.finishedRoute)
             {
-                int currentId = gameManager.finishedRoute.destinationID;
-                foreach(MapPoint mp in FindObjectsOfType<MapPoint>())
-                {
-                    if (mp.id == currentId)
-                    {
-                        currentMapPoint = mp;
-                        break;
-                    }
-                }
+                currentMapPoint = MapPoint.FindByID(gameManager.finishedRoute.destinationID);
             }
         }
+        FindObjectOfType<RoutePath>().display(true);
     }
 
     // Update is called once per frame
@@ -104,15 +97,16 @@ public class MapManager : MonoBehaviour
             {
                 //Launch ship
                 List<GameObject> objectPrefabs = new List<GameObject>();
-                foreach(MapArea mp in FindObjectsOfType<MapArea>())
+                foreach (MapArea mp in FindObjectsOfType<MapArea>())
                 {
                     objectPrefabs.AddRange(mp.objectPrefabs);
                 }
                 Route route = new Route(
                     (targetMapPoint.transform.position - currentMapPoint.transform.position).magnitude * unitsToSpaceMiles,
+                    currentMapPoint.id,
                     targetMapPoint.id,
                     objectPrefabs
-                    );;
+                    ); ;
                 FindObjectOfType<GameManager>().startRoute(route);
             }
             if (highlightMapPoint != currentMapPoint)
@@ -125,17 +119,12 @@ public class MapManager : MonoBehaviour
             }
             if (targetMapPoint)
             {
-                travelPath.SetActive(true);
-                Vector2 diff = targetMapPoint.transform.position - currentMapPoint.transform.position;
-                travelPath.transform.position = (Vector2)currentMapPoint.transform.position + diff / 2;
-                travelPath.transform.right = diff.normalized;
-                Vector2 size = travelPath.GetComponent<SpriteRenderer>().size;
-                size.x = diff.magnitude;
-                travelPath.GetComponent<SpriteRenderer>().size = size;
+                travelPath.gameObject.SetActive(true);
+                travelPath.setEndPoints(currentMapPoint, targetMapPoint);
             }
             else
             {
-                travelPath.SetActive(false);
+                travelPath.gameObject.SetActive(false);
             }
         }
     }

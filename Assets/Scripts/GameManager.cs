@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public Route currentRoute { get; private set; } = null;
     public Route finishedRoute { get; private set; } = null;
+    public RoutePath routePath;
     public float spawnDelay = 1;
     private float lastSpawnTime = 0;
 
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
             {
                 showMap(true);
                 finishedRoute = currentRoute;
+                routePath.routes.Add(finishedRoute);
                 currentRoute = null;
             }
         }
@@ -65,25 +67,21 @@ public class GameManager : MonoBehaviour
 
     public void showMap(bool show)
     {
+        milesLeftText.enabled = !show;
+        activeObjectsFolder.SetActive(!show);
+        mainCamera.gameObject.SetActive(!show);
         if (show)
         {
-            activeObjectsFolder.SetActive(false);
-            mainCamera.gameObject.SetActive(false);
             Scene mapScene = SceneManager.GetSceneByName("MapScene");
             if (!mapScene.isLoaded)
             {
                 SceneManager.LoadScene("MapScene", LoadSceneMode.Additive);
             }
-            milesLeftText.enabled = false;
         }
         else
         {
-            activeObjectsFolder.SetActive(true);
             SceneManager.UnloadSceneAsync("MapScene");
-            //Destroy current level objects
-            //2010-04-28: copied from http://answers.unity.com/answers/717490/view.html
-            mainCamera.gameObject.SetActive(true);
-            milesLeftText.enabled = true;
+            routePath.display(false);
         }
     }
 }

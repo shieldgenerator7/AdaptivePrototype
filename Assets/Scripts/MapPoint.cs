@@ -38,4 +38,16 @@ public class MapPoint : MonoBehaviour
             }
         }
     }
+
+    public static MapPoint FindByID(int id)
+    {
+        foreach(MapPoint mp in FindObjectsOfType<MapPoint>())
+        {
+            if (mp.id == id)
+            {
+                return mp;
+            }
+        }
+        return null;
+    }
 }
