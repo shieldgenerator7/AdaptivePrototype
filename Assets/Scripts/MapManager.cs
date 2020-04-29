@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class MapManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Find map point to highlight
         MapPoint mouseOverPoint = null;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         foreach (MapPoint mp in FindObjectsOfType<MapPoint>())
@@ -86,6 +88,7 @@ public class MapManager : MonoBehaviour
                     (targetMapPoint.transform.position - currentMapPoint.transform.position).magnitude * unitsToSpaceMiles,
                     new List<MapArea>(FindObjectsOfType<MapArea>())
                     );
+                FindObjectOfType<GameManager>().startRoute(route);
             }
             if (highlightMapPoint != currentMapPoint)
             {
