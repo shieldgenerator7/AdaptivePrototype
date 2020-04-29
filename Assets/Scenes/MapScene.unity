@@ -2553,7 +2553,7 @@ MonoBehaviour:
   highlightMapPoint: {fileID: 0}
   targetMapPoint: {fileID: 0}
   shipMarker: {fileID: 1482039712}
-  markerBuffer: 0.5
+  markerBuffer: 0.25
   travelPath: {fileID: 157815554}
   unitsToSpaceMiles: 200
 --- !u!4 &1608358174

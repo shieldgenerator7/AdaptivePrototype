@@ -54,10 +54,6 @@ public class MapManager : MonoBehaviour
                 }
             }
         }
-        if (mouseOverPoint != null)
-        {
-            int i = 0;
-        }
         if (mouseOverPoint != highlightMapPoint)
         {
             highlightMapPoint?.highlight(false);
