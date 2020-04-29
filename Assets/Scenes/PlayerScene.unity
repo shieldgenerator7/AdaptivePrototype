@@ -2871,8 +2871,9 @@ GameObject:
   - component: {fileID: 1355070322}
   - component: {fileID: 1355070321}
   - component: {fileID: 1355070323}
+  - component: {fileID: 1355070324}
   m_Layer: 0
-  m_Name: WrapBounds
+  m_Name: WrapDeleteBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2978,6 +2979,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec15993328ff4b945a9e7b96469027c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1355070324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355070319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df641d58ea95bf247add26bfb6754037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1358275621 stripped
