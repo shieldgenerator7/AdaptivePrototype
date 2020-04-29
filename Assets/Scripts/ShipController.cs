@@ -26,6 +26,8 @@ public abstract class ShipController : MonoBehaviour
         HP = maxHP;
     }
 
+    public List<ShipAbility> abilities;
+
     private Rigidbody2D rb2d;
 
     // Start is called before the first frame update
@@ -38,9 +40,21 @@ public abstract class ShipController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Movement
         Vector2 input = movementInput();
         rb2d.velocity = (transform.up * input.y + transform.right * input.x).normalized * moveSpeed;
         rb2d.velocity += Vector2.up * driftSpeed;
+        //Abilities
+        if (abilities.Count > 0)
+        {
+            if (fireInput())
+            {
+                foreach(ShipAbility ability in abilities)
+                {
+                    ability.activate(true);
+                }
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,6 +72,13 @@ public abstract class ShipController : MonoBehaviour
     /// </summary>
     /// <returns></returns>
     protected abstract Vector2 movementInput();
+
+    /// <summary>
+    /// Whether the ship is attacking using its attack
+    /// </summary>
+    /// <returns></returns>
+    protected abstract bool fireInput();
+
     /// <summary>
     /// Called when the ship's healthPoints reaches 0
     /// </summary>

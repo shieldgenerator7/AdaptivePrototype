@@ -11,6 +11,11 @@ public class PlayerController : ShipController
         return new Vector2(horizontal, vertical);
     }
 
+    protected override bool fireInput()
+    {
+        return Input.GetButton("Fire");
+    }
+
     protected override void destroy()
     {
         FindObjectOfType<GameManager>().cancelRoute();

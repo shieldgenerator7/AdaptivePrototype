@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidController : ShipController
+public class ShotController : ShipController
 {
     protected override Vector2 movementInput()
     {
-        return Vector2.zero;
+        return Vector2.up;
     }
 
     protected override bool fireInput()

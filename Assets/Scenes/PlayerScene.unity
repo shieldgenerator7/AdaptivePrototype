@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 514592}
   - component: {fileID: 514591}
   - component: {fileID: 514590}
+  - component: {fileID: 514595}
   m_Layer: 0
   m_Name: Prototype
   m_TagString: Untagged
@@ -155,6 +156,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   driftSpeed: 3
+  maxHP: 100
+  abilities:
+  - {fileID: 514595}
 --- !u!58 &514591
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -256,6 +260,23 @@ Transform:
   m_Father: {fileID: 1155612452}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &514595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7523460d2918d4c9b53aa3f2f6722c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireDelay: 0.1
+  fireDirection: {x: 0, y: 1}
+  firePosition: {x: 0, y: 1}
+  firePrefab: {fileID: 6382292549079107300, guid: 4a4b815fe8347e7419df1fbe220359bb,
+    type: 3}
 --- !u!1001 &28059777
 PrefabInstance:
   m_ObjectHideFlags: 0
