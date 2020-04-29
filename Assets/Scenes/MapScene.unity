@@ -2474,6 +2474,7 @@ MonoBehaviour:
   shipMarker: {fileID: 1482039712}
   markerBuffer: 0.5
   travelPath: {fileID: 157815551}
+  unitsToSpaceMiles: 200
 --- !u!4 &1608358174
 Transform:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class MapManager : MonoBehaviour
     public float markerBuffer = 0.5f;//distance between current map point and ship marker
     public GameObject travelPath;
 
+    public float unitsToSpaceMiles = 45;//multiply by Unity units to get space miles
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +79,14 @@ public class MapManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             targetMapPoint?.highlight(false);
+            if (highlightMapPoint == targetMapPoint)
+            {
+                //Launch ship
+                Route route = new Route(
+                    (targetMapPoint.transform.position - currentMapPoint.transform.position).magnitude * unitsToSpaceMiles,
+                    new List<MapArea>(FindObjectsOfType<MapArea>())
+                    );
+            }
             if (highlightMapPoint != currentMapPoint)
             {
                 targetMapPoint = highlightMapPoint;
