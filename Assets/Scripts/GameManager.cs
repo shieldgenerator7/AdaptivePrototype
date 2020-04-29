@@ -52,9 +52,10 @@ public class GameManager : MonoBehaviour
                 lastSpawnTime += spawnDelay;
                 GameObject spawnedObject = currentRoute.spawnObject(spawnBounds.bounds);
                 spawnedObject.transform.parent = levelObjectsFolder.transform;
-
             }
-            milesLeftText.text = "" + Mathf.Max(0, currentRoute.distance - prototype.transform.position.y);
+            float milesLeft = Mathf.Max(0, currentRoute.distance - prototype.transform.position.y);
+            milesLeft = Mathf.Floor(milesLeft * 10) / 10;
+            milesLeftText.text = "" + milesLeft;
             if (prototype.transform.position.y >= currentRoute.distance)
             {
                 showMap(true);
