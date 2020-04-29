@@ -8,7 +8,23 @@ public abstract class ShipController : MonoBehaviour
     public float driftSpeed = 0;//how fast the ship is floating thru space
 
     public int maxHP = 100;
-    public int healthPoints = 0;
+    private int _hp = 0;
+    public int HP
+    {
+        get => _hp;
+        set
+        {
+            _hp = Mathf.Clamp(value, 0, maxHP);
+            if (_hp == 0)
+            {
+                destroy();
+            }
+        }
+    }
+    public void restoreHP()
+    {
+        HP = maxHP;
+    }
 
     private Rigidbody2D rb2d;
 
@@ -16,7 +32,7 @@ public abstract class ShipController : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        healthPoints = maxHP;
+        restoreHP();
     }
 
     // Update is called once per frame
@@ -32,11 +48,7 @@ public abstract class ShipController : MonoBehaviour
         ShipController other = collision.gameObject.GetComponent<ShipController>();
         if (other)
         {
-            healthPoints -= other.maxHP;
-            if (healthPoints <= 0)
-            {
-                destroy();
-            }
+            HP -= other.maxHP;
         }
     }
 
