@@ -10,6 +10,7 @@ public class MapManager : MonoBehaviour
 
     public GameObject shipMarker;
     public float markerBuffer = 0.5f;//distance between current map point and ship marker
+    public GameObject travelPath;
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +70,21 @@ public class MapManager : MonoBehaviour
             Vector2 dir = (targetPos - (Vector2)currentMapPoint.transform.position).normalized;
             shipMarker.transform.up = dir;
             shipMarker.transform.position = (Vector2)currentMapPoint.transform.position + (dir * markerBuffer);
+        }
+
+        //Update target map point
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (highlightMapPoint)
+            {
+                targetMapPoint = highlightMapPoint;
+                Vector2 diff = targetMapPoint.transform.position - currentMapPoint.transform.position;
+                travelPath.transform.position = (Vector2)currentMapPoint.transform.position + diff/2;
+                travelPath.transform.right = diff.normalized;
+                Vector2 size = travelPath.GetComponent<SpriteRenderer>().size;
+                size.x = diff.magnitude;
+                travelPath.GetComponent<SpriteRenderer>().size = size;
+            }
         }
     }
 }
