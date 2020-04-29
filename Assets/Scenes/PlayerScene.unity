@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7523460d2918d4c9b53aa3f2f6722c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireDelay: 0.1
+  fireDelay: 0.2
   fireDirection: {x: 0, y: 1}
   firePosition: {x: 0, y: 1}
   firePrefab: {fileID: 6382292549079107300, guid: 4a4b815fe8347e7419df1fbe220359bb,

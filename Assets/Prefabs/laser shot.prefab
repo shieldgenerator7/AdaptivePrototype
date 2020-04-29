@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5023824917129139110}
   - component: {fileID: 1473530801230443043}
   - component: {fileID: 6945387927252071948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: laser shot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.09, y: 0.97}
     newSize: {x: 0.09, y: 0.97}
     adaptiveTilingThreshold: 0.5
@@ -146,3 +146,4 @@ MonoBehaviour:
   moveSpeed: 2
   driftSpeed: 0
   maxHP: 2
+  abilities: []
