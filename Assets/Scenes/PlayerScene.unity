@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireDelay: 0.2
   fireDirection: {x: 0, y: 1}
-  firePosition: {x: 0, y: 1}
+  firePosition: {x: 0, y: 0.7}
   firePrefab: {fileID: 6382292549079107300, guid: 4a4b815fe8347e7419df1fbe220359bb,
     type: 3}
 --- !u!1001 &28059777
