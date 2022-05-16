@@ -4,17 +4,88 @@ using UnityEngine;
 using System.Diagnostics;
 using UnityEditor;
 using UnityEngine.SceneManagement;
-using UnityEngine.U2D;
+using Debug = UnityEngine.Debug;
+using UnityEditor.SceneManagement;
+using System;
+using System.Linq;
 
 public class CustomMenu
-{//2020-04-28: copied from Stonicorn.CustomMenu
+{//2022-05-16: copied from DwarfTower.CustomMenu
+
+    //Find Missing Scripts
+    //2018-04-13: copied from http://wiki.unity3d.com/index.php?title=FindMissingScripts
+    static int go_count = 0, components_count = 0, missing_count = 0;
+    [MenuItem("SG7/Editor/Refactor/Find Missing Scripts")]
+    private static void FindMissingScripts()
+    {
+        go_count = 0;
+        components_count = 0;
+        missing_count = 0;
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            Scene s = SceneManager.GetSceneAt(i);
+            if (s.isLoaded)
+            {
+                foreach (GameObject go in s.GetRootGameObjects())
+                {
+                    FindInGO(go);
+                }
+            }
+        }
+        Debug.Log($"Searched {go_count} GameObjects, {components_count} components, found {missing_count} missing");
+    }
+    private static void FindInGO(GameObject go)
+    {
+        go_count++;
+        Component[] components = go.GetComponents<Component>();
+        for (int i = 0; i < components.Length; i++)
+        {
+            components_count++;
+            if (components[i] == null)
+            {
+                missing_count++;
+                string s = go.name;
+                Transform t = go.transform;
+                while (t.parent != null)
+                {
+                    s = $"{t.parent.name}/{s}";
+                    t = t.parent;
+                }
+                Debug.Log(
+                    $"{s} has an empty script attached in position: {i}",
+                    go
+                    );
+            }
+        }
+        // Now recurse through each child GO (if there are any):
+        foreach (Transform childT in go.transform)
+        {
+            FindInGO(childT.gameObject);
+        }
+    }
+
+    [MenuItem("SG7/Editor/Show or Hide All Colliders %&c")]
+    public static void showHideAllColliders()
+    {
+        Physics2D.alwaysShowColliders = !Physics2D.alwaysShowColliders;
+    }
+
     [MenuItem("SG7/Build/Build Windows %w")]
     public static void buildWindows()
     {
         build(BuildTarget.StandaloneWindows, "exe");
     }
-
-    public static void build(BuildTarget buildTarget, string extension)
+    //[MenuItem("SG7/Build/Build Linux %l")]
+    //public static void buildLinux()
+    //{
+    //    build(BuildTarget.StandaloneLinux, "x86");
+    //}
+    //[MenuItem("SG7/Build/Build Mac OS X %#l")]
+    //public static void buildMacOSX()
+    //{
+    //    build(BuildTarget.StandaloneOSX, "");
+    //}
+    public static void build(BuildTarget buildTarget, string extension, bool openDialog = true)
     {
         string defaultPath = getDefaultBuildPath();
         if (!System.IO.Directory.Exists(defaultPath))
@@ -23,20 +94,23 @@ public class CustomMenu
         }
         //2017-10-19 copied from https://docs.unity3d.com/Manual/BuildPlayerPipeline.html
         // Get filename.
-        string buildName = EditorUtility.SaveFilePanel(
-            "Choose Location of Built Game",
-            defaultPath,
-            getProductName(),
-            extension
-            );
-
+        string buildName = getBuildNamePath(extension);
+        if (openDialog)
+        {
+            buildName = EditorUtility.SaveFilePanel(
+                "Choose Location of Built Game",
+                defaultPath,
+                PlayerSettings.productName,
+                extension
+                );
+        }
         // User hit the cancel button.
         if (buildName == "")
             return;
 
         string path = buildName.Substring(0, buildName.LastIndexOf("/"));
-        UnityEngine.Debug.Log("BUILDNAME: " + buildName);
-        UnityEngine.Debug.Log("PATH: " + path);
+        Debug.Log($"BUILDNAME: {buildName}");
+        Debug.Log($"PATH: {path}");
 
         //Add scenes to build
         string[] levels = new string[EditorBuildSettings.scenes.Length];
@@ -68,13 +142,14 @@ public class CustomMenu
 
     [MenuItem("SG7/Run/Run Windows %#w")]
     public static void runWindows()
-    {//2018-08-10: copied from build()
+    {
         string extension = "exe";
         string buildName = getBuildNamePath(extension);
-        UnityEngine.Debug.Log("Launching: " + buildName);
+        Debug.Log($"Launching: {buildName}");
         // Run the game (Process class from System.Diagnostics).
         Process proc = new Process();
         proc.StartInfo.FileName = buildName;
+        proc.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
         proc.Start();
     }
 
@@ -89,26 +164,54 @@ public class CustomMenu
 
     public static string getDefaultBuildPath()
     {
-        string productName = getProductName();
-        return System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) 
-            + "/Unity/" 
-            + productName 
-            + "/Builds/" 
-            + productName + "_" + PlayerSettings.bundleVersion.Replace(".", "_");
+        return $"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}" +
+            $"/Unity/{PlayerSettings.productName}/Builds/" +
+            $"{PlayerSettings.productName}_{PlayerSettings.bundleVersion.Replace(".", "_")}";
     }
     public static string getBuildNamePath(string extension, bool checkFolderExists = true)
     {
         string defaultPath = getDefaultBuildPath();
         if (checkFolderExists && !System.IO.Directory.Exists(defaultPath))
         {
-            throw new UnityException("You need to build the " + extension + " for " + PlayerSettings.productName + " (Version " + PlayerSettings.bundleVersion + ") first!");
+            throw new UnityException(
+                $"You need to build the {extension} for {PlayerSettings.productName} " +
+                $"(Version {PlayerSettings.bundleVersion}) first!");
         }
-        string buildName = defaultPath + "/" + getProductName() + "." + extension;
+        string buildName = $"{defaultPath}/{PlayerSettings.productName}.{extension}";
         return buildName;
     }
 
-    public static string getProductName()
+    [MenuItem("SG7/Session/Begin Session")]
+    public static void beginSession()
     {
-        return PlayerSettings.productName.Replace(" ", "");
+        Debug.Log("=== Beginning session ===");
+        string oldVersion = PlayerSettings.bundleVersion;
+        string[] split = oldVersion.Split('.');
+        string versionName = System.Text.RegularExpressions.Regex
+            .Replace(split[1], "[^0-9.]", "");
+        int versionNumber = int.Parse(versionName) + 1;
+        string newVersion = split[0] + "."
+            + ((versionNumber < 100) ? "0" : "")
+            + versionNumber;
+        PlayerSettings.bundleVersion = newVersion;
+        //Save and Log
+        EditorSceneManager.SaveOpenScenes();
+        Debug.LogWarning($"Updated build version number from {oldVersion} to {newVersion}");
+    }
+
+    [MenuItem("SG7/Session/Finish Session")]
+    public static void finishSession()
+    {
+        Debug.Log("=== Finishing session ===");
+        EditorSceneManager.SaveOpenScenes();
+        buildWindows();
+        //Open folders
+        openBuildFolder();
+    }
+
+    [MenuItem("SG7/Upgrade/Force save all assets")]
+    public static void forceSaveAllAssets()
+    {
+        AssetDatabase.ForceReserializeAssets();
     }
 }
